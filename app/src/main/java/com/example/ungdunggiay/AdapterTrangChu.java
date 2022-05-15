@@ -86,6 +86,7 @@ public class AdapterTrangChu extends RecyclerView.Adapter<GiayViewHolder>{
 
                 KhachHang kh = MainMenu.khachHangDao.getkhEmail(MainMenu.email);
                 MainMenu.gioHangDao.ThemGioHang(new GioHang(hinh1,ten,gia,soluong,size,kh.getId()));
+                Toast.makeText(context,"Thêm vào giỏ hàng thành công",Toast.LENGTH_LONG).show();
             }
         });
 

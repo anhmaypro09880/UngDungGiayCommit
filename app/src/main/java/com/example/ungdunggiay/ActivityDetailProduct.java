@@ -17,7 +17,7 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 public class ActivityDetailProduct extends AppCompatActivity {
-    TextView tenSanPham,giaTien,moTaa,txtSoLuong;
+    TextView tenSanPham,giaTien,moTaa,txtSoLuong,txtDanhGia;
     ImageView img1,img2,img3,img4,imgReudece,imgIncrease;
     Context ctx;
     Button btn39,btn40,btn41,btn42,btn43,btnMuaNgay;
@@ -50,6 +50,7 @@ public class ActivityDetailProduct extends AppCompatActivity {
 
         moTaa.setText(moTa);
         giaTien.setText(tach(Integer.parseInt(giaThanh))+"VND");
+        txtDanhGia.setText(danhGia);
 
         Picasso.get().load(hinh1).into(img1);
         Picasso.get().load(hinh2).into(img2);
@@ -225,6 +226,7 @@ public class ActivityDetailProduct extends AppCompatActivity {
          imgIncrease = findViewById(R.id.imgIncrease);
          imgReudece = findViewById(R.id.imgReduce);
          txtSoLuong = findViewById(R.id.txtSoLuong);
+         txtDanhGia = findViewById(R.id.txtDanhGia);
 
     }
     public String XoaKhoangTrang(String text)

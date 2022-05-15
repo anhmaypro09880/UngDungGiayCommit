@@ -48,6 +48,8 @@ public class MainMenu extends AppCompatActivity {
     NavigationView navigationView;
     FirebaseDatabase test = FirebaseDatabase.getInstance();
     DatabaseReference data = test.getReference("SanPham");
+    public  static GioHangDao gioHangDao;
+    public  static KhachHangDao khachHangDao;
     public com.example.ungdunggiay.DatabaseHoaDon db;
     public static String email;
     @Override
@@ -64,7 +66,8 @@ public class MainMenu extends AppCompatActivity {
         setContentView(R.layout.activity_main_menu);
         db= Room.databaseBuilder(getApplicationContext(),
                 com.example.ungdunggiay.DatabaseHoaDon.class,"HoadonBH1.db").allowMainThreadQueries().build();
-        KhachHangDao khachHangDao = db.KhachHangDao();
+        khachHangDao = db.KhachHangDao();
+        gioHangDao = db.GioHangDao();
 //        khachHangDao.ThemKH(new KhachHang("Dao Cao Thang","0385553842","Go Vap","a@gmail.com"));
 //        Intent intent = new Intent(MainMenu.this,MainActivity.class);
         Intent intent = this.getIntent();
@@ -74,7 +77,7 @@ public class MainMenu extends AppCompatActivity {
         TextView test = findViewById(R.id.idKH);
         KhachHang khachHang= khachHangDao.getkhEmail(email);
         test.setText(khachHang.getTenKH());
-
+//        khachHangDao= db.KhachHangDao();
         drawerLayout = findViewById(R.id.drawerlayout);
         navigationView = findViewById(R.id.navicationView);
         actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout,R.string.menu_Open,R.string.close_menu);

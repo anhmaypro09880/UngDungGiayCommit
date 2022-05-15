@@ -26,7 +26,7 @@
         app:srcCompat="@drawable/giay_removebg_preview" />
 
     <ImageView
-        android:id="@+id/idimgBack"
+        android:id="@+id/imgAdd"
         android:layout_width="412dp"
         android:layout_height="390dp"
         android:layout_marginTop="248dp"
@@ -43,8 +43,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
         android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="@+id/idimgBack"
-        app:layout_constraintTop_toTopOf="@+id/idimgBack"
+        app:layout_constraintStart_toStartOf="@+id/imgAdd"
+        app:layout_constraintTop_toTopOf="@+id/imgAdd"
         app:srcCompat="@drawable/evalute" />
 
     <TextView
@@ -88,7 +88,7 @@
         android:textColor="#000000"
         android:textSize="22sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/idimgBack"
+        app:layout_constraintStart_toStartOf="@+id/imgAdd"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <TextView
@@ -101,7 +101,7 @@
         android:textColor="#000000"
         android:textSize="22sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/idimgBack"
+        app:layout_constraintStart_toStartOf="@+id/imgAdd"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <ImageView
@@ -132,7 +132,7 @@
         android:layout_marginTop="15dp"
         android:text="Mua giày thể thao sneakers chính hãng, chất lượng. Shopee giao hàng nhanh - thanh toán linh dễ dàng. Mua giày thể thao sneakers tại Shopee ..."
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/idimgBack"
+        app:layout_constraintStart_toStartOf="@+id/imgAdd"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <ImageView

@@ -25,6 +25,7 @@ public class AdapterTrangChu extends RecyclerView.Adapter<GiayViewHolder>{
     private LayoutInflater layoutInflater;
     private Adaptergiohang.IClickLisner clickLisner;
 
+
 //    private MainSanPham spDao = new MainSanPham();
 //    public interface IClickLisner {
 //        void onClickIteam();
@@ -71,6 +72,20 @@ public class AdapterTrangChu extends RecyclerView.Adapter<GiayViewHolder>{
                 intent.putExtra("danhGia",listGiay.get(i).getDanhGia());
                 intent.putExtra("email",MainMenu.email);
                 context.startActivity(intent);
+            }
+        });
+        holder.img2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String hinh1 = listGiay.get(i).getHinh1();
+                String ten = listGiay.get(i).getTenSanPham();
+                int size = 39;
+                int soluong = 1;
+                int gia = Integer.parseInt(listGiay.get(i).getGiaTien()) ;
+
+
+                KhachHang kh = MainMenu.khachHangDao.getkhEmail(MainMenu.email);
+                MainMenu.gioHangDao.ThemGioHang(new GioHang(hinh1,ten,gia,soluong,size,kh.getId()));
             }
         });
 

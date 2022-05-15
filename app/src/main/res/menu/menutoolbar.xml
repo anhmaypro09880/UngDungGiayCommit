@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:title="Sản Phẩm"
+            android:id="@+id/sanpham"
+            android:icon="@drawable/pngtree_shoes_icon">
+        </item>
+        <item
+            android:title="Hóa đơn"
+            android:id="@+id/hoadon"
+            android:icon="@drawable/ic_baseline_assignment_24">
+        </item>
+        <item
+            android:title="Thông tin cá nhân"
+            android:id="@+id/ttcanhan"
+            android:icon="@drawable/ic_baseline_supervised_user_circle_24">
+        </item>
+        <item
+            android:title="Đăng xuất"
+            android:id="@+id/dangxuat"
+            android:icon="@drawable/ic_baseline_power_settings_new_24">
+        </item>
+    </group>
+</menu>

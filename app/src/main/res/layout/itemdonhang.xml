@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="170dp"
+    android:background="@drawable/border_radius"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="398dp"
+        android:layout_height="156dp"
+        android:background="@drawable/list_viewsp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/idhinhdonhang"
+            android:layout_width="207dp"
+            android:layout_height="140dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/giay_removebg_preview" />
+
+        <TextView
+            android:id="@+id/idTenSPDonhang"
+            android:layout_width="153dp"
+            android:layout_height="32dp"
+            android:text="Giay The Thao"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/idhinhdonhang"
+            app:layout_constraintTop_toTopOf="@+id/idhinhdonhang" />
+
+        <TextView
+            android:id="@+id/idgiadonhang"
+            android:layout_width="154dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:text="500000"
+            android:textColor="#F44336"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/idhinhdonhang"
+            app:layout_constraintTop_toBottomOf="@+id/idTenSPDonhang" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="61dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="4dp"
+            android:text="Size:"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/idhinhdonhang"
+            app:layout_constraintTop_toBottomOf="@+id/idgiadonhang" />
+
+        <TextView
+            android:id="@+id/idsizedonhang"
+            android:layout_width="67dp"
+            android:layout_height="35dp"
+            android:text="39"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/textView11"
+            app:layout_constraintTop_toTopOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="95dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="4dp"
+            android:text="Số lượng:"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/idhinhdonhang"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/idsoluongdonhang"
+            android:layout_width="46dp"
+            android:layout_height="30dp"
+            android:text="1"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/textView13"
+            app:layout_constraintTop_toTopOf="@+id/textView13" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

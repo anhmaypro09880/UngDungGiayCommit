@@ -8,38 +8,31 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.room.Room;
-
 import com.squareup.picasso.Picasso;
 
-import org.w3c.dom.Text;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
 import java.util.ArrayList;
 
 public class Adaptergiohang extends BaseAdapter {
     Context context;
-    ArrayList<com.example.ungdunggiay.GioHang> arrayList;
+    ArrayList<GioHang> arrayList;
     int idItem;
 
 //    DatabaseHoaDon db = Room.databaseBuilder(context.getApplicationContext(),
 //            DatabaseHoaDon.class,"HoadonBH1.db").allowMainThreadQueries().build();
     private IClickLisner clickLisner;
     public interface IClickLisner {
-        void onClickCongIteam(com.example.ungdunggiay.GioHang en);
-        void onClickTruIteam(com.example.ungdunggiay.GioHang en);
+        void onClickCongIteam(GioHang en);
+        void onClickTruIteam(GioHang en);
     }
 
-    public Adaptergiohang(Context context, ArrayList<com.example.ungdunggiay.GioHang> arrayList, int idItem, IClickLisner clickLisner) {
+    public Adaptergiohang(Context context, ArrayList<GioHang> arrayList, int idItem, IClickLisner clickLisner) {
         this.context = context;
         this.arrayList = arrayList;
         this.idItem = idItem;
         this.clickLisner = clickLisner;
     }
 
-    public Adaptergiohang(Context context, ArrayList<com.example.ungdunggiay.GioHang> arrayList, int idItem) {
+    public Adaptergiohang(Context context, ArrayList<GioHang> arrayList, int idItem) {
         this.context = context;
         this.arrayList = arrayList;
         this.idItem = idItem;
@@ -80,7 +73,7 @@ public class Adaptergiohang extends BaseAdapter {
         int soluongmua = arrayList.get(i).getSoluong();
         ImageView tru = view.findViewById(R.id.tru);
         ImageView cong = view.findViewById(R.id.cong);
-        com.example.ungdunggiay.GioHang en = arrayList.get(i);
+        GioHang en = arrayList.get(i);
 
 
 
@@ -139,7 +132,7 @@ public class Adaptergiohang extends BaseAdapter {
             public void onClick(View view) {
                 if(arrayList.get(i).getSoluong()>1)
                 {
-                    com.example.ungdunggiay.GioHang sp = new com.example.ungdunggiay.GioHang();
+                    GioHang sp = new GioHang();
                     sp.setHinh(arrayList.get(i).getHinh());
                     sp.setTen(arrayList.get(i).getTen());
                     sp.setId(arrayList.get(i).getId());

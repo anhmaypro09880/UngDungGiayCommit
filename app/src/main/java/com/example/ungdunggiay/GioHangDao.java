@@ -6,15 +6,14 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Dao
 public interface GioHangDao {
     @Insert
-    void ThemGioHang(com.example.ungdunggiay.GioHang gioHang);
+    void ThemGioHang(GioHang gioHang);
     @Query("select * from GioHang where maKH=:maKH")
-    List<com.example.ungdunggiay.GioHang> getGioHang(int maKH);
+    List<GioHang> getGioHang(int maKH);
     @Update
     void UpdateGioHang(GioHang gioHang);
     @Query("select * from GioHang where id=:id")

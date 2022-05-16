@@ -10,9 +10,9 @@ import java.util.List;
 @Dao
 public interface KhachHangDao {
     @Insert
-    void ThemKH(com.example.ungdunggiay.KhachHang kh);
+    void ThemKH(KhachHang kh);
     @Query("select * from KhachHang")
-    List<com.example.ungdunggiay.KhachHang> getKHAll();
+    List<KhachHang> getKHAll();
     @Query("select * from KhachHang where email=:email")
     KhachHang getkhEmail(String email);
     @Update

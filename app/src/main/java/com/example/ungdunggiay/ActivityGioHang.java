@@ -24,10 +24,10 @@ public class ActivityGioHang extends AppCompatActivity {
     public static KhachHangDao khachHangDao;
 
     ListView listView;
-    public static  ArrayList<com.example.ungdunggiay.GioHang> arrayListchinh;
+    public static  ArrayList<GioHang> arrayListchinh;
 
     public static TextView tong;
-    public static List<com.example.ungdunggiay.GioHang> dsGioHang;
+    public static List<GioHang> dsGioHang;
 //    TextView tong = findViewById(R.id.idtongtien);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,9 +57,9 @@ public class ActivityGioHang extends AppCompatActivity {
 
 //        hoaDonDao.themCTHD(new ChiTietHoaDon(1,"CTHD1",1,100,1));
 //        hoaDonDao.themCTHD(new ChiTietHoaDon(1,"CTHD2",1,100,1));
-        List<com.example.ungdunggiay.KhachHang> dskh = khachHangDao.getKHAll();
+        List<KhachHang> dskh = khachHangDao.getKHAll();
 
-        List<com.example.ungdunggiay.ChiTietHoaDon> ds = hoaDonDao.getCTHD(2);
+        List<ChiTietHoaDon> ds = hoaDonDao.getCTHD(2);
 //        gioHangDao.ThemGioHang(new GioHang("https://firebasestorage.googleapis.com/v0/b/ungdunggiay.appspot.com/o/giay-removebg-preview.png?alt=media&token=ff0aa5d3-911c-4c7f-b100-42ab7edf230d","Giay 2",200000,2,39,1));
        Intent intent = this.getIntent();
        String email;

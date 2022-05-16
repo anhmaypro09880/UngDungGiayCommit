@@ -6,7 +6,7 @@ import androidx.room.ForeignKey;
 @Entity(tableName = "GioHang_KhachHang",
         primaryKeys = { "maGioHang", "maKH" },
         foreignKeys = {
-                @ForeignKey(entity = com.example.ungdunggiay.GioHang.class,
+                @ForeignKey(entity = GioHang.class,
                         parentColumns = "id",
                         childColumns = "maGioHang"),
                 @ForeignKey(entity = KhachHang.class,

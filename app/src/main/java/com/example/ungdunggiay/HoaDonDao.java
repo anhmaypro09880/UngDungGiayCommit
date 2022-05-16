@@ -9,16 +9,16 @@ import java.util.List;
 @Dao
 public interface  HoaDonDao {
     @Insert
-    void themHoaDon(com.example.ungdunggiay.HoaDon hoaDon);
+    void themHoaDon(HoaDon hoaDon);
     @Query("select * from HoaDon")
-    List<com.example.ungdunggiay.HoaDon> getAll();
+    List<HoaDon> getAll();
     @Insert
-    void themCTHD(com.example.ungdunggiay.ChiTietHoaDon chiTietHoaDon);
+    void themCTHD(ChiTietHoaDon chiTietHoaDon);
     @Insert
-    void  themHD_CT(com.example.ungdunggiay.HoaDon_ChiTiet hoaDon_chiTiet);
+    void  themHD_CT(HoaDon_ChiTiet hoaDon_chiTiet);
     @Query("select * from ChiTietHoaDon where maHoaDon=:maHoaDon")
-    List<com.example.ungdunggiay.ChiTietHoaDon> getCTHD(int maHoaDon);
+    List<ChiTietHoaDon> getCTHD(int maHoaDon);
     @Query("select * from HoaDon where maKH=:maKH")
-    List<com.example.ungdunggiay.HoaDon> getHoaDonByKH(int maKH);
+    List<HoaDon> getHoaDonByKH(int maKH);
 
 }

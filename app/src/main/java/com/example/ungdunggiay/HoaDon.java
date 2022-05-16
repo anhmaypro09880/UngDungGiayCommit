@@ -5,7 +5,7 @@ import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 
 
-@Entity(foreignKeys = @ForeignKey(entity = com.example.ungdunggiay.KhachHang.class,
+@Entity(foreignKeys = @ForeignKey(entity = KhachHang.class,
         parentColumns = "id",
         childColumns = "maKH",deferred = true
 ))

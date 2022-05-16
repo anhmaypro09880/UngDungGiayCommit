@@ -23,6 +23,7 @@
         android:layout_height="54dp"
         android:layout_marginStart="44dp"
         android:layout_marginTop="36dp"
+        android:paddingLeft="18dp"
         android:background="@drawable/list_edt"
         android:drawableRight="@drawable/iconsearch2"
         android:ems="10"
